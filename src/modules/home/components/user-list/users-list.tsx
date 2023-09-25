@@ -11,7 +11,7 @@ const UsersList: React.FC<Props> = ({ usersList }) => {
       <h1 className="text-lg font-semibold mb-4">
         Users who have used our service:
       </h1>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
         {usersList?.map((user) => <UserCard key={user.id} user={user} />)}
       </div>
     </>
