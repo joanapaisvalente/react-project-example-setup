@@ -7,4 +7,9 @@ export const contacts_en = {
     emailInput: "Your email",
     submit: "Submit",
   },
+  successfulSubscription: {
+    title: "Thank you for subscribing to our newsletter, {{name}}!",
+    subscriptionInformation:
+      "You will receive the latest updates directly in you inbox!",
+  },
 };
