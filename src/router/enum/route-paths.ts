@@ -1,4 +1,5 @@
 export enum RoutePaths {
-    HOME = '/',
-    CONTACTS = '/contacts',
+  HOME = "/",
+  CONTACTS = "/contacts",
+  SETTINGS = "/settings",
 }

@@ -16,6 +16,11 @@ const Header = () => {
           {t("header.menu.contacts")}
         </h3>
       </Link>
+      <Link to={RoutePaths.SETTINGS}>
+        <h3 className="text-slate-800 text-lg font-semibold hover:underline">
+          {t("header.menu.settings")}
+        </h3>
+      </Link>
     </div>
   );
 };

@@ -2,8 +2,20 @@ import { initReactI18next } from "react-i18next";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-import { header_en, footer_en, home_en, contacts_en } from "./locales/en/en";
-import { header_pt, footer_pt, home_pt, contacts_pt } from "./locales/pt/pt";
+import {
+  header_en,
+  footer_en,
+  home_en,
+  contacts_en,
+  settings_en,
+} from "./locales/en/en";
+import {
+  header_pt,
+  footer_pt,
+  home_pt,
+  contacts_pt,
+  settings_pt,
+} from "./locales/pt/pt";
 
 i18n
   .use(LanguageDetector)
@@ -18,6 +30,7 @@ i18n
           footer: footer_en,
           home: home_en,
           contacts: contacts_en,
+          settings: settings_en,
         },
       },
       pt: {
@@ -26,6 +39,7 @@ i18n
           footer: footer_pt,
           home: home_pt,
           contacts: contacts_pt,
+          settings: settings_pt,
         },
       },
     },

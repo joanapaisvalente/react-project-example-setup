@@ -12,7 +12,7 @@ export const footer_en = {
     returnsPolicy: "Returns policy",
     paymentOptions: "Payment options",
   },
-  thirdSections: {
+  thirdSection: {
     title: "Follow us",
     facebook: "Facebook",
     twitter: "Twitter",
