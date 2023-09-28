@@ -3,5 +3,6 @@ export const header_en = {
     home: "Home",
     contacts: "Contacts",
     settings: "Settings",
+    users: "Users",
   },
 };

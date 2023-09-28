@@ -3,5 +3,6 @@ export const header_pt = {
     home: "Início",
     contacts: "Contactos",
     settings: "Definições",
+    users: "Utilizadores",
   },
 };

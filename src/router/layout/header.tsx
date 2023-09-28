@@ -5,15 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import NavbarOptions from "./components/navbar-options/navbar-options";
 import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
+import { useTranslation } from "react-i18next";
 
 const navbarOptions = [
-  { redirectTo: RoutePaths.HOME, linkName: "Home" },
-  { redirectTo: RoutePaths.CONTACTS, linkName: "Contacts" },
-  { redirectTo: RoutePaths.SETTINGS, linkName: "Settings" },
+  { redirectTo: RoutePaths.HOME, translation: "header.menu.home" },
+  { redirectTo: RoutePaths.CONTACTS, translation: "header.menu.contacts" },
+  { redirectTo: RoutePaths.SETTINGS, translation: "header.menu.settings" },
+  { redirectTo: RoutePaths.USERS, translation: "header.menu.users" },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -32,7 +35,7 @@ const Header = () => {
               <li>
                 <Link to={option.redirectTo}>
                   <h3 className="text-slate-800 text-lg font-semibold hover:underline">
-                    {option.linkName}
+                    {t(option.translation)}
                   </h3>
                 </Link>
               </li>
@@ -41,7 +44,10 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <NavbarOptions setNavbarOptionsVisibility={setIsMenuOpen} />
+        <NavbarOptions
+          setNavbarOptionsVisibility={setIsMenuOpen}
+          navBarOptions={navbarOptions}
+        />
       )}
     </>
   );
