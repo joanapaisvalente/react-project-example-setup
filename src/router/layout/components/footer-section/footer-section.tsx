@@ -5,7 +5,7 @@ interface Props {
 
 const FooterSection: React.FC<Props> = ({ sectionTitle, sectionLinks }) => {
   return (
-    <div className="w-1/3 p-3">
+    <div className="max-w-1/5 p-3 flex flex-col">
       <h3 className="text-slate-800 font-semibold my-3">{sectionTitle}</h3>
       <ul>
         {sectionLinks.map((link, index) => (

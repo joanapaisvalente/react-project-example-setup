@@ -1,11 +1,17 @@
-.spacer {
-    aspect-ratio: 960/300;
+.wavy {
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 }
 
-.layer {
-    background-image: url('../../../../assets/footer.svg');
+.wavy svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 56px;
+}
+
+.wavy .shape-fill {
+    fill: #F8FAFC;
 }

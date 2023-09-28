@@ -3,3 +3,4 @@ export { footer_pt } from "./footer_pt";
 export { home_pt } from "./home_pt";
 export { contacts_pt } from "./contacts_pt";
 export { settings_pt } from "./settings_pt";
+export { error_pt } from "./error_pt";

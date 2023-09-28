@@ -8,6 +8,7 @@ import {
   home_en,
   contacts_en,
   settings_en,
+  error_en,
 } from "./locales/en/en";
 import {
   header_pt,
@@ -15,6 +16,7 @@ import {
   home_pt,
   contacts_pt,
   settings_pt,
+  error_pt,
 } from "./locales/pt/pt";
 
 i18n
@@ -31,6 +33,7 @@ i18n
           home: home_en,
           contacts: contacts_en,
           settings: settings_en,
+          error: error_en,
         },
       },
       pt: {
@@ -40,6 +43,7 @@ i18n
           home: home_pt,
           contacts: contacts_pt,
           settings: settings_pt,
+          error: error_pt,
         },
       },
     },

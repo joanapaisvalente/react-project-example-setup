@@ -9,6 +9,7 @@ import { Settings } from "./modules/settings";
 
 import "react-toastify/dist/ReactToastify.css";
 import { Users } from "./modules/users";
+import Error from "./router/layout/components/error/error";
 
 const client = new QueryClient();
 
@@ -23,6 +24,7 @@ const App: React.FC = () => {
               <Route path={RoutePaths.CONTACTS} element={<Contacts />} />
               <Route path={RoutePaths.SETTINGS} element={<Settings />} />
               <Route path={RoutePaths.USERS} element={<Users />} />
+              <Route path={RoutePaths.NOT_FOUND} element={<Error />} />
             </Route>
           </Routes>
         </Router>

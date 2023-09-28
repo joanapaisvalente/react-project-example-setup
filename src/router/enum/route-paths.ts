@@ -3,4 +3,5 @@ export enum RoutePaths {
   CONTACTS = "/contacts",
   SETTINGS = "/settings",
   USERS = "/users",
+  NOT_FOUND = "/*",
 }
