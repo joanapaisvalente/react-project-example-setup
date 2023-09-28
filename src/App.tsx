@@ -8,6 +8,7 @@ import { Contacts } from "./modules/contacts";
 import { Settings } from "./modules/settings";
 
 import "react-toastify/dist/ReactToastify.css";
+import { Users } from "./modules/users";
 
 const client = new QueryClient();
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
               <Route path={RoutePaths.HOME} element={<Home />} />
               <Route path={RoutePaths.CONTACTS} element={<Contacts />} />
               <Route path={RoutePaths.SETTINGS} element={<Settings />} />
+              <Route path={RoutePaths.USERS} element={<Users />} />
             </Route>
           </Routes>
         </Router>
