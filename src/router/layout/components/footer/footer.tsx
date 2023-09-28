@@ -1,5 +1,6 @@
-import FooterSection from "./components/footer-section/footer-section";
 import { useTranslation } from "react-i18next";
+import FooterSection from "../footer-section/footer-section";
+import "./footer.css";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -33,15 +34,18 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full bg-slate-50 flex justify-center">
-      <div className="w-full sm:w-4/5 flex flex-row">
-        {footerInformation.map((information, index) => (
-          <FooterSection
-            key={index}
-            sectionTitle={information.title}
-            sectionLinks={information.links}
-          />
-        ))}
+    <div>
+      <div className="bg-[url('./assets/footer.svg')] w-full bg-no-repeat bg-center bg-cover aspect-[960/300]"></div>
+      <div className="w-full bg-slate-200 flex justify-center">
+        <div className="w-full sm:w-4/5 flex flex-row">
+          {footerInformation.map((information, index) => (
+            <FooterSection
+              key={index}
+              sectionTitle={information.title}
+              sectionLinks={information.links}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

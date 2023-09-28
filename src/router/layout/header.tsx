@@ -31,8 +31,8 @@ const Header = () => {
             />
           </button>
           <ul className="sm:flex sm:fex-row gap-x-4 hidden">
-            {navbarOptions.map((option) => (
-              <li>
+            {navbarOptions.map((option, index) => (
+              <li key={index}>
                 <Link to={option.redirectTo}>
                   <h3 className="text-slate-800 text-lg font-semibold hover:underline">
                     {t(option.translation)}
