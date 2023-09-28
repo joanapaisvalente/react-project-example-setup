@@ -1,27 +1,49 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RoutePaths } from "../enum/route-paths";
-import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import NavbarOptions from "./components/navbar-options/navbar-options";
+import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
+
+const navbarOptions = [
+  { redirectTo: RoutePaths.HOME, linkName: "Home" },
+  { redirectTo: RoutePaths.CONTACTS, linkName: "Contacts" },
+  { redirectTo: RoutePaths.SETTINGS, linkName: "Settings" },
+];
 
 const Header = () => {
-  const { t } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="w-full h-[70px] bg-slate-400 flex justify-center items-center gap-5 mb-2">
-      <Link to={RoutePaths.HOME}>
-        <h3 className="text-slate-800 text-lg font-semibold hover:underline">
-          {t("header.menu.home")}
-        </h3>
-      </Link>
-      <Link to={RoutePaths.CONTACTS}>
-        <h3 className="text-slate-800 text-lg font-semibold hover:underline">
-          {t("header.menu.contacts")}
-        </h3>
-      </Link>
-      <Link to={RoutePaths.SETTINGS}>
-        <h3 className="text-slate-800 text-lg font-semibold hover:underline">
-          {t("header.menu.settings")}
-        </h3>
-      </Link>
-    </div>
+    <>
+      <div className="w-full h-[70px] bg-slate-200 flex justify-between items-center gap-5 mb-6">
+        <h1 className="text-2xl font-bold ml-6">LOGO</h1>
+        <div className="flex items-center mr-6">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <FontAwesomeIcon
+              icon={!isMenuOpen ? faBars : faXmark}
+              size="lg"
+              className="sm:hidden block"
+            />
+          </button>
+          <ul className="sm:flex sm:fex-row gap-x-4 hidden">
+            {navbarOptions.map((option) => (
+              <li>
+                <Link to={option.redirectTo}>
+                  <h3 className="text-slate-800 text-lg font-semibold hover:underline">
+                    {option.linkName}
+                  </h3>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {isMenuOpen && (
+        <NavbarOptions setNavbarOptionsVisibility={setIsMenuOpen} />
+      )}
+    </>
   );
 };
 
